@@ -12,7 +12,7 @@ interface StaffMember {
 const staffData: StaffMember[] = [
   // ── Leadership ──────────────────────────────────────────────────────────
   {
-    name: 'Mr S.S. Mafunda',
+    name: 'Mrs Molotsi',
     position: 'Principal',
     category: 'Leadership',
     image: './assets/about/principal.jpg',
@@ -22,9 +22,13 @@ const staffData: StaffMember[] = [
     position: 'Deputy Principal',
     category: 'Leadership',
   },
+  {
+    name: 'Mr M Z Makalima',
+    position: 'Contact Administrator',
+    category: 'Leadership',
+  },
 
   // ── Departmental Heads ───────────────────────────────────────────────────
-  // Update names below via the Staff Portal once confirmed
   {
     name: 'HOD — Humanities',
     position: 'Head of Department',
@@ -77,12 +81,12 @@ const categories = [
 const StaffCard = ({ member }: { member: StaffMember }) => (
   <div
     className="rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-center p-6 text-center hover:-translate-y-1"
-    style={ { background: '#FFFBEF', border: '1px solid #C8A400' } }
+    style={ { background: '#FFFDF5', border: '1px solid #C4A862' } }
   >
     {/* Avatar */}
     <div
       className="w-24 h-24 rounded-full flex items-center justify-center mb-4 overflow-hidden"
-      style={ { background: '#FDF9EC', border: '3px solid #C8A400' } }
+      style={ { background: '#FAF8F0', border: '3px solid #C4A862' } }
     >
       {member.image ? (
         <img
@@ -92,20 +96,20 @@ const StaffCard = ({ member }: { member: StaffMember }) => (
           onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
         />
       ) : (
-        <User size={40} style={ { color: '#C8A400', opacity: 0.5 } } />
+        <User size={40} style={ { color: '#C4A862', opacity: 0.5 } } />
       )}
     </div>
 
-    <h3 className="text-sm font-bold leading-tight" style={ { color: '#166534' } }>
+    <h3 className="text-sm font-bold leading-tight" style={ { color: '#1B2A4A' } }>
       {member.name}
     </h3>
-    <p className="text-xs font-semibold mt-1" style={ { color: '#C8A400' } }>
+    <p className="text-xs font-semibold mt-1" style={ { color: '#C4A862' } }>
       {member.position}
     </p>
     {member.subject && (
       <span
         className="mt-2 inline-block text-xs font-medium px-3 py-1 rounded-full"
-        style={ { background: '#FDF9EC', color: '#166534', border: '1px solid #C8A400' } }
+        style={ { background: '#FAF8F0', color: '#1B2A4A', border: '1px solid #C4A862' } }
       >
         {member.subject}
       </span>
@@ -118,52 +122,50 @@ export const Staff = () => {
   const filtered = staffData.filter(m => m.category === activeCategory);
 
   return (
-    <div className="min-h-screen py-12 px-4" style={ { background: '#FDF9EC' } }>
+    <div className="min-h-screen py-12 px-4" style={ { background: '#FAF8F0' } }>
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-extrabold tracking-tight mb-3" style={ { color: '#166534' } }>
+          <h1 className="text-4xl font-extrabold tracking-tight mb-3" style={ { color: '#1B2A4A' } }>
             Our Staff
           </h1>
-          <div className="w-16 h-1 mx-auto rounded-full mb-4" style={ { background: '#C8A400' } } />
-          <p className="text-gray-500 text-base max-w-2xl mx-auto">
-            Meet the dedicated team of educators and support staff at Lupindo Senior Secondary School.
+          <p className="text-gray-500 max-w-xl mx-auto">
+            Meet the dedicated team behind Ramafole Senior Secondary School — 35 educators committed to excellence.
           </p>
+          <div className="w-16 h-1 bg-[#C4A862] mx-auto mt-4 rounded-full" />
         </div>
 
-        {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-10">
+        {/* Category tabs */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
           {categories.map(cat => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
+              className="px-5 py-2 rounded-full text-sm font-bold transition-all"
               style={
                 activeCategory === cat
-                  ? { background: '#C8A400', color: '#166534', border: '2px solid #C8A400', fontWeight: 700 }
-                  : { background: '#FFFBEF', color: '#166534', border: '2px solid #C8A400' }
+                  ? { background: '#1B2A4A', color: '#C4A862' }
+                  : { background: '#FFFDF5', color: '#1B2A4A', border: '1px solid #C4A862' }
               }
-              className="px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 hover:shadow-md"
             >
               {cat}
-              <span className="ml-2 text-xs font-bold opacity-60">
-                ({staffData.filter(m => m.category === cat).length})
-              </span>
             </button>
           ))}
         </div>
 
-        {/* Staff Cards Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
-          {filtered.map((member, index) => (
-            <StaffCard key={index} member={member} />
+        {/* Staff grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          {filtered.map((member, i) => (
+            <StaffCard key={`${member.name}-${i}`} member={member} />
           ))}
         </div>
 
-        {/* Note */}
-        <p className="text-center text-gray-400 text-xs mt-10 italic">
-          Staff names and photos will be updated progressively. Add details via the Staff Portal.
-        </p>
+        {filtered.length === 0 && (
+          <div className="text-center py-16 text-gray-400">
+            No staff members in this category yet.
+          </div>
+        )}
       </div>
     </div>
   );

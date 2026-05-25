@@ -61,13 +61,13 @@ const Field = ({
 );
 
 const inp =
-  'border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#C8A400]/40 focus:border-[#166534] transition w-full bg-white';
+  'border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#C4A862]/40 focus:border-[#1B2A4A] transition w-full bg-white';
 
 const sel = inp + ' cursor-pointer';
 
 const SectionHeading = ({ icon, title }: { icon: React.ReactNode; title: string }) => (
   <div className="flex items-center gap-2 pb-2 border-b border-gray-200 mb-4">
-    <span className="text-[#166534]">{icon}</span>
+    <span className="text-[#1B2A4A]">{icon}</span>
     <h3 className="text-sm font-black uppercase tracking-widest text-gray-700">{title}</h3>
   </div>
 );
@@ -78,8 +78,8 @@ const StepBadge = ({
   <div className="flex items-center gap-2">
     <div
       className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-black border-2 transition-all
-        ${done   ? 'bg-[#C8A400] border-[#166534] text-white'
-        : active ? 'bg-white border-white text-[#166534]'
+        ${done   ? 'bg-[#C4A862] border-[#1B2A4A] text-white'
+        : active ? 'bg-white border-white text-[#1B2A4A]'
         :          'bg-white/20 border-white/30 text-white/60'}`}
     >
       {done ? <CheckCircle size={14} /> : num}
@@ -269,12 +269,12 @@ export const Admissions = () => {
           transition={{ duration: 0.25 }}
           className="text-center p-10 sm:p-12 bg-white rounded-3xl shadow-2xl max-w-md"
         >
-          <div className="w-20 h-20 bg-[#FFF3CC] text-[#166534] rounded-full flex items-center justify-center mx-auto mb-6">
+          <div className="w-20 h-20 bg-[#FFF3CC] text-[#1B2A4A] rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle size={48} />
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Application Submitted!</h2>
           <p className="text-gray-600 mb-8">
-            Thank you for applying to Lupindo Senior Secondary School. We have received your application and will be in contact shortly.
+            Thank you for applying to Ramafole Senior Secondary School. We have received your application and will be in contact shortly.
           </p>
           <a href="/" className="btn-primary w-full inline-block">Back to Home</a>
         </motion.div>
@@ -305,12 +305,12 @@ export const Admissions = () => {
         <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
 
           {/* Header / step indicator */}
-          <div className="bg-[#C8A400] px-8 py-7 text-white">
+          <div className="bg-[#C4A862] px-8 py-7 text-white">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-5">
               <div>
                 <h2 className="text-2xl font-bold">Application for Admission to School</h2>
                 <p className="text-white/70 text-sm mt-1">
-                  Lupindo Senior Secondary School &nbsp;·&nbsp; Igoga Location, Matatiele 4730
+                  Ramafole Senior Secondary School &nbsp;·&nbsp; Igoga Location, Mount Fletcher 4730
                 </p>
               </div>
               <div className="text-right text-sm text-white/70">
@@ -723,7 +723,7 @@ export const Admissions = () => {
                       <button
                         type="button"
                         onClick={() => setHasSecondParent(p => !p)}
-                        className="text-sm font-semibold text-[#166534] underline underline-offset-2"
+                        className="text-sm font-semibold text-[#1B2A4A] underline underline-offset-2"
                       >
                         {hasSecondParent ? '− Remove second parent/guardian' : '+ Add second parent/guardian'}
                       </button>
@@ -815,12 +815,12 @@ export const Admissions = () => {
                               key={field.key}
                               className={`relative flex items-center gap-3 p-3 rounded-xl border-2 transition
                                 ${file
-                                  ? 'border-[#166534] bg-[#FDF9EC]'
+                                  ? 'border-[#1B2A4A] bg-[#FAF8F0]'
                                   : field.required
                                     ? 'border-dashed border-red-300 bg-red-50/40'
                                     : 'border-dashed border-gray-300 bg-gray-50'}`}
                             >
-                              <div className={`shrink-0 w-8 h-8 rounded-lg flex items-center justify-center ${file ? 'bg-[#C8A400] text-white' : 'bg-gray-200 text-gray-400'}`}>
+                              <div className={`shrink-0 w-8 h-8 rounded-lg flex items-center justify-center ${file ? 'bg-[#C4A862] text-white' : 'bg-gray-200 text-gray-400'}`}>
                                 {file ? <CheckCircle size={16} /> : <Upload size={16} />}
                               </div>
                               <div className="flex-1 min-w-0">
@@ -828,10 +828,10 @@ export const Admissions = () => {
                                   {field.label}
                                   {field.required && <span className="text-red-500 ml-1">*</span>}
                                 </div>
-                                {file && <div className="text-xs text-[#166534] truncate mt-0.5">{file.name}</div>}
+                                {file && <div className="text-xs text-[#1B2A4A] truncate mt-0.5">{file.name}</div>}
                                 {!file && <div className="text-xs text-gray-400 mt-0.5">No file chosen</div>}
                               </div>
-                              <label className="shrink-0 text-xs font-bold text-[#166534] cursor-pointer hover:underline">
+                              <label className="shrink-0 text-xs font-bold text-[#1B2A4A] cursor-pointer hover:underline">
                                 {file ? 'Change' : 'Upload'}
                                 <input
                                   type="file"
@@ -862,7 +862,7 @@ export const Admissions = () => {
                           type="checkbox"
                           checked={disclaimer}
                           onChange={e => setDisclaimer(e.target.checked)}
-                          className="mt-0.5 w-4 h-4 accent-[#C8A400] cursor-pointer"
+                          className="mt-0.5 w-4 h-4 accent-[#C4A862] cursor-pointer"
                         />
                         <span className="text-sm text-gray-700 group-hover:text-gray-900">
                           I, the parent/guardian, confirm that the information provided is accurate and correct, and I agree to the above declaration.
@@ -899,7 +899,7 @@ export const Admissions = () => {
                     <button
                       type="button"
                       onClick={goNext}
-                      className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#C8A400] text-white text-sm font-bold hover:bg-[#B89200]/90 transition shadow"
+                      className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#C4A862] text-white text-sm font-bold hover:bg-[#B89200]/90 transition shadow"
                     >
                       Next <ChevronRight size={16} />
                     </button>
@@ -907,7 +907,7 @@ export const Admissions = () => {
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="inline-flex items-center gap-2 px-7 py-2.5 rounded-xl bg-[#C8A400] text-white text-sm font-bold hover:bg-[#B89200]/90 disabled:opacity-60 disabled:cursor-not-allowed transition shadow"
+                      className="inline-flex items-center gap-2 px-7 py-2.5 rounded-xl bg-[#C4A862] text-white text-sm font-bold hover:bg-[#B89200]/90 disabled:opacity-60 disabled:cursor-not-allowed transition shadow"
                     >
                       {submitting ? (
                         <><span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" /> Submitting…</>

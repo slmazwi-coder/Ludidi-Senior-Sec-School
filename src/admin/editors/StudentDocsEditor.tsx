@@ -20,7 +20,7 @@ function generateId() {
 }
 
 function getStoreKey(studentNumber: string) {
-  return `lupindo_student_docs_${studentNumber}`;
+  return `ramafole_student_docs_${studentNumber}`;
 }
 
 function getDocs(studentNumber: string) {
@@ -178,7 +178,7 @@ export const StudentDocsEditor = () => {
           <button
             onClick={upload}
             disabled={!canUpload}
-            className="bg-[#C8A400] text-white px-6 py-2 rounded-xl font-medium hover:bg-[#540D1C] disabled:opacity-50"
+            className="bg-[#C4A862] text-white px-6 py-2 rounded-xl font-medium hover:bg-[#0F1A2E] disabled:opacity-50"
           >
             Upload
           </button>

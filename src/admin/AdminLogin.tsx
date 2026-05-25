@@ -31,11 +31,11 @@ export const AdminLogin = () => {
         </button>
 
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-[#C8A400] rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-[#C4A862] rounded-full flex items-center justify-center mx-auto mb-4">
             <Lock className="text-white" size={28} />
           </div>
           <h1 className="text-2xl font-bold text-white">Staff Portal</h1>
-          <p className="text-gray-400 text-sm mt-1">Lupindo SSS Administration</p>
+          <p className="text-gray-400 text-sm mt-1">Ramafole SSS Administration</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -49,7 +49,7 @@ export const AdminLogin = () => {
                   setPassword(e.target.value);
                   setError('');
                 }}
-                className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C8A400] focus:border-transparent"
+                className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C4A862] focus:border-transparent"
                 placeholder="Enter admin password"
                 autoFocus
               />
@@ -68,7 +68,7 @@ export const AdminLogin = () => {
 
           <button
             type="submit"
-            className="w-full bg-[#C8A400] text-white py-3 rounded-xl font-bold hover:bg-[#540D1C] transition-colors"
+            className="w-full bg-[#C4A862] text-white py-3 rounded-xl font-bold hover:bg-[#0F1A2E] transition-colors"
           >
             Sign In
           </button>

@@ -28,7 +28,7 @@ async function fileToDataUrl(file: File): Promise<string> {
 
 // ─── Reusable UI ──────────────────────────────────────────────────────────────
 
-const inp = 'border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#C8A400]/40 focus:border-[#166534] transition w-full bg-white';
+const inp = 'border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#C4A862]/40 focus:border-[#1B2A4A] transition w-full bg-white';
 const sel = inp + ' cursor-pointer';
 
 const Field = ({ label, required, children, className = '' }: {
@@ -43,8 +43,8 @@ const Field = ({ label, required, children, className = '' }: {
 );
 
 const SectionHeading = ({ title }: { title: string }) => (
-  <div className="flex items-center gap-2 pb-2 border-b-2 border-[#166534]/20 mb-5">
-    <FileText size={15} className="text-[#166534] shrink-0" />
+  <div className="flex items-center gap-2 pb-2 border-b-2 border-[#1B2A4A]/20 mb-5">
+    <FileText size={15} className="text-[#1B2A4A] shrink-0" />
     <h3 className="text-sm font-black uppercase tracking-widest text-gray-700">{title}</h3>
   </div>
 );
@@ -54,8 +54,8 @@ const StepBadge = ({ num, label, active, done }: {
 }) => (
   <div className="flex items-center gap-2">
     <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-black border-2 transition-all
-      ${done ? 'bg-[#C8A400] border-[#166534] text-white'
-      : active ? 'bg-white border-white text-[#166534]'
+      ${done ? 'bg-[#C4A862] border-[#1B2A4A] text-white'
+      : active ? 'bg-white border-white text-[#1B2A4A]'
       : 'bg-white/20 border-white/30 text-white/60'}`}>
       {done ? <CheckCircle size={14} /> : num}
     </div>
@@ -74,22 +74,22 @@ const FileUploadRow = ({ label, required, fileKey, files, onChange }: {
   const file = files[fileKey];
   return (
     <div className={`flex items-center gap-3 p-3 rounded-xl border-2 transition
-      ${file ? 'border-[#166534] bg-[#FDF9EC]'
+      ${file ? 'border-[#1B2A4A] bg-[#FAF8F0]'
       : required ? 'border-dashed border-red-300 bg-red-50/30'
       : 'border-dashed border-gray-300 bg-gray-50'}`}>
       <div className={`shrink-0 w-8 h-8 rounded-lg flex items-center justify-center
-        ${file ? 'bg-[#C8A400] text-white' : 'bg-gray-200 text-gray-400'}`}>
+        ${file ? 'bg-[#C4A862] text-white' : 'bg-gray-200 text-gray-400'}`}>
         {file ? <CheckCircle size={16} /> : <Upload size={16} />}
       </div>
       <div className="flex-1 min-w-0">
         <div className="text-xs font-semibold text-gray-700 leading-tight">
           {label}{required && <span className="text-red-500 ml-1">*</span>}
         </div>
-        <div className={`text-xs mt-0.5 truncate ${file ? 'text-[#166534]' : 'text-gray-400'}`}>
+        <div className={`text-xs mt-0.5 truncate ${file ? 'text-[#1B2A4A]' : 'text-gray-400'}`}>
           {file ? file.name : 'No file chosen'}
         </div>
       </div>
-      <label className="shrink-0 text-xs font-bold text-[#166534] cursor-pointer hover:underline">
+      <label className="shrink-0 text-xs font-bold text-[#1B2A4A] cursor-pointer hover:underline">
         {file ? 'Change' : 'Upload'}
         <input type="file" className="hidden" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
           onChange={e => onChange(fileKey, e.target.files?.[0] ?? null)} />
@@ -408,7 +408,7 @@ export const Boarding = () => {
           transition={{ duration: 0.25 }}
           className="text-center p-10 sm:p-12 bg-white rounded-3xl shadow-2xl max-w-md"
         >
-          <div className="w-20 h-20 bg-[#FFF3CC] text-[#166534] rounded-full flex items-center justify-center mx-auto mb-6">
+          <div className="w-20 h-20 bg-[#FFF3CC] text-[#1B2A4A] rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle size={48} />
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Boarding Application Submitted!</h2>
@@ -429,7 +429,7 @@ export const Boarding = () => {
         <h1 className="section-title">Boarding Application</h1>
 
         {/* Info banner */}
-        <div className="mb-6 bg-[#FDF9EC] border border-[#C8A400] rounded-2xl p-4 flex gap-3">
+        <div className="mb-6 bg-[#FAF8F0] border border-[#C4A862] rounded-2xl p-4 flex gap-3">
           <Info size={18} className="text-blue-500 shrink-0 mt-0.5" />
           <div className="text-sm text-blue-800">
             <strong>This application covers two forms:</strong><br />
@@ -441,7 +441,7 @@ export const Boarding = () => {
         <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
 
           {/* Header */}
-          <div className="bg-[#C8A400] px-8 py-7 text-white">
+          <div className="bg-[#C4A862] px-8 py-7 text-white">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
               <div>
                 <h2 className="text-2xl font-bold">Boarding & Bursary Application</h2>
@@ -536,7 +536,7 @@ export const Boarding = () => {
                           <input className={inp} type="number" min={0} value={learner.distanceHomeToSchool} onChange={e => patchL('distanceHomeToSchool', e.target.value)} />
                         </Field>
                         <Field label="Name & Address of School Admitted To" className="sm:col-span-2">
-                          <input className={inp} value={learner.schoolNameAndAddress} onChange={e => patchL('schoolNameAndAddress', e.target.value)} placeholder="Lupindo SSS, Igoga Location, Matatiele" />
+                          <input className={inp} value={learner.schoolNameAndAddress} onChange={e => patchL('schoolNameAndAddress', e.target.value)} placeholder="Ramafole SSS, Igoga Location, Mount Fletcher" />
                         </Field>
                         <Field label="Surname & First Name(s) of Parent/Guardian" className="sm:col-span-2">
                           <input className={inp} placeholder="Enter parent/guardian full names" onChange={() => {}} value={`${father.name} ${father.surname}`.trim()} readOnly className={inp + ' bg-gray-50'} />
@@ -559,8 +559,8 @@ export const Boarding = () => {
                           <thead>
                             <tr>
                               <th className="text-left px-3 py-2 bg-gray-100 text-xs font-bold text-gray-600 uppercase w-44">Field</th>
-                              <th className="text-left px-3 py-2 bg-[#FDF9EC] text-xs font-bold text-[#166534] uppercase">Father / Guardian / Responsible Person</th>
-                              <th className="text-left px-3 py-2 bg-[#FDF9EC] text-xs font-bold text-[#166534] uppercase">Mother / Relative</th>
+                              <th className="text-left px-3 py-2 bg-[#FAF8F0] text-xs font-bold text-[#1B2A4A] uppercase">Father / Guardian / Responsible Person</th>
+                              <th className="text-left px-3 py-2 bg-[#FAF8F0] text-xs font-bold text-[#1B2A4A] uppercase">Mother / Relative</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -665,7 +665,7 @@ export const Boarding = () => {
                       </ol>
                       <label className="flex items-start gap-3 cursor-pointer group">
                         <input type="checkbox" checked={undertaking} onChange={e => setUndertaking(e.target.checked)}
-                          className="mt-0.5 w-4 h-4 accent-[#C8A400] cursor-pointer" />
+                          className="mt-0.5 w-4 h-4 accent-[#C4A862] cursor-pointer" />
                         <span className="text-sm text-gray-700 group-hover:text-gray-900">
                           I accept and agree to the above undertaking as the parent/guardian of the applicant.
                         </span>
@@ -740,7 +740,7 @@ export const Boarding = () => {
                       <div className="overflow-x-auto rounded-xl border border-gray-200">
                         <table className="w-full text-sm">
                           <thead>
-                            <tr className="bg-[#FDF9EC]">
+                            <tr className="bg-[#FAF8F0]">
                               <th className="px-3 py-2 text-left text-xs font-bold text-gray-600 uppercase">#</th>
                               <th className="px-3 py-2 text-left text-xs font-bold text-gray-600 uppercase">Surname</th>
                               <th className="px-3 py-2 text-left text-xs font-bold text-gray-600 uppercase">First Name</th>
@@ -769,7 +769,7 @@ export const Boarding = () => {
                         </table>
                       </div>
                       <button type="button" onClick={() => setChildren(p => [...p, { surname:'',firstName:'',dob:'',grade:'',school:'' }])}
-                        className="mt-2 text-xs text-[#166534] font-semibold hover:underline">+ Add another child</button>
+                        className="mt-2 text-xs text-[#1B2A4A] font-semibold hover:underline">+ Add another child</button>
                     </section>
 
                     {/* Other dependent children */}
@@ -805,7 +805,7 @@ export const Boarding = () => {
                       <div className="overflow-x-auto rounded-xl border border-gray-200">
                         <table className="w-full text-sm">
                           <thead>
-                            <tr className="bg-[#FDF9EC]">
+                            <tr className="bg-[#FAF8F0]">
                               <th className="px-3 py-2 text-left text-xs font-bold text-gray-600 uppercase w-24">Person</th>
                               <th className="px-3 py-2 text-left text-xs font-bold text-gray-600 uppercase">Name of Employer</th>
                               <th className="px-3 py-2 text-left text-xs font-bold text-gray-600 uppercase">Tel of Employer</th>
@@ -871,9 +871,9 @@ export const Boarding = () => {
                 {step === 3 && (
                   <>
                     {/* Download declaration */}
-                    <section className="bg-[#FDF9EC] border-2 border-[#C8A400] rounded-2xl p-6">
+                    <section className="bg-[#FAF8F0] border-2 border-[#C4A862] rounded-2xl p-6">
                       <div className="flex gap-4 items-start">
-                        <div className="w-12 h-12 bg-[#FFF3CC] text-[#166534] rounded-xl flex items-center justify-center shrink-0">
+                        <div className="w-12 h-12 bg-[#FFF3CC] text-[#1B2A4A] rounded-xl flex items-center justify-center shrink-0">
                           <Download size={22} />
                         </div>
                         <div className="flex-1">
@@ -891,7 +891,7 @@ export const Boarding = () => {
                           >
                             <Download size={16} /> Download Declaration Form (HTL 03 Section 7)
                           </button>
-                          <p className="text-xs text-[#166534] mt-3">
+                          <p className="text-xs text-[#1B2A4A] mt-3">
                             The downloaded file is an HTML form. Open it in a browser and print it, or save as PDF.
                           </p>
                         </div>
@@ -956,12 +956,12 @@ export const Boarding = () => {
 
                   {step < 3 ? (
                     <button type="button" onClick={goNext}
-                      className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#C8A400] text-white text-sm font-bold hover:bg-[#B89200]/90 transition shadow">
+                      className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#C4A862] text-white text-sm font-bold hover:bg-[#B89200]/90 transition shadow">
                       Next <ChevronRight size={16} />
                     </button>
                   ) : (
                     <button type="submit" disabled={submitting}
-                      className="inline-flex items-center gap-2 px-7 py-2.5 rounded-xl bg-[#C8A400] text-white text-sm font-bold hover:bg-[#B89200]/90 disabled:opacity-60 disabled:cursor-not-allowed transition shadow">
+                      className="inline-flex items-center gap-2 px-7 py-2.5 rounded-xl bg-[#C4A862] text-white text-sm font-bold hover:bg-[#B89200]/90 disabled:opacity-60 disabled:cursor-not-allowed transition shadow">
                       {submitting
                         ? <><span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" /> Submitting…</>
                         : <><CheckCircle size={16} /> Submit Boarding Application</>}

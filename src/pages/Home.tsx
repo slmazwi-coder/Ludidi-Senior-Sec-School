@@ -3,9 +3,9 @@ import { motion } from 'motion/react';
 import { Award, TrendingUp, Users, Megaphone, ArrowRight } from 'lucide-react';
 
 const stats = [
-  { label: 'Matric Pass Rate', value: '94.5%', icon: TrendingUp },
-  { label: 'Bachelors Pass', value: '71.8%', icon: Award },
-  { label: 'Subject Distinctions', value: '451', icon: Users },
+  { label: 'Learners', value: '1,293', icon: Users },
+  { label: 'Educators', value: '35', icon: TrendingUp },
+  { label: 'Learner-Teacher Ratio', value: '37:1', icon: Award },
 ];
 
 export const Home = () => {
@@ -15,14 +15,14 @@ export const Home = () => {
       <section className="py-10 sm:py-12 bg-white">
         <div className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <div className="rounded-3xl border border-[#C8A400] bg-[#FDF9EC] p-6 sm:p-7 flex gap-4 items-start">
-              <div className="p-3 rounded-2xl bg-white border border-[#C8A400] text-[#166534] shrink-0">
+            <div className="rounded-3xl border border-[#C4A862] bg-[#FAF8F0] p-6 sm:p-7 flex gap-4 items-start">
+              <div className="p-3 rounded-2xl bg-white border border-[#C4A862] text-[#1B2A4A] shrink-0">
                 <Megaphone size={22} />
               </div>
               <div className="min-w-0">
                 <div className="flex flex-wrap items-center gap-2">
-                  <div className="text-sm font-black uppercase tracking-widest text-[#166534]">Notice</div>
-                  <span className="px-2 py-1 rounded-full text-xs font-bold bg-white border border-[#C8A400] text-gray-700">
+                  <div className="text-sm font-black uppercase tracking-widest text-[#1B2A4A]">Notice</div>
+                  <span className="px-2 py-1 rounded-full text-xs font-bold bg-white border border-[#C4A862] text-gray-700">
                     2027
                   </span>
                 </div>
@@ -30,19 +30,19 @@ export const Home = () => {
                 <p className="text-gray-700 mt-1">
                   General school applications for the <span className="font-bold">2027</span> academic year are open.
                 </p>
-                <a href="/admissions" className="mt-4 inline-flex items-center gap-2 text-[#166534] font-bold">
+                <a href="/admissions" className="mt-4 inline-flex items-center gap-2 text-[#1B2A4A] font-bold">
                   Apply now <ArrowRight size={18} />
                 </a>
               </div>
             </div>
 
             <div className="rounded-3xl border border-gray-200 bg-gray-50 p-6 sm:p-7 flex gap-4 items-start">
-              <div className="p-3 rounded-2xl bg-white border border-gray-200 text-[#166534] shrink-0">
+              <div className="p-3 rounded-2xl bg-white border border-gray-200 text-[#1B2A4A] shrink-0">
                 <Megaphone size={22} />
               </div>
               <div className="min-w-0">
                 <div className="flex flex-wrap items-center gap-2">
-                  <div className="text-sm font-black uppercase tracking-widest text-[#166534]">Boarding</div>
+                  <div className="text-sm font-black uppercase tracking-widest text-[#1B2A4A]">Boarding</div>
                   <span className="px-2 py-1 rounded-full text-xs font-bold bg-white border border-gray-200 text-gray-700">
                     2027
                   </span>
@@ -51,7 +51,7 @@ export const Home = () => {
                 <p className="text-gray-700 mt-1">
                   Hostel accommodation applications for the <span className="font-bold">2027</span> academic year are open.
                 </p>
-                <a href="/boarding" className="mt-4 inline-flex items-center gap-2 text-[#166534] font-bold">
+                <a href="/boarding" className="mt-4 inline-flex items-center gap-2 text-[#1B2A4A] font-bold">
                   Apply for boarding <ArrowRight size={18} />
                 </a>
               </div>
@@ -70,9 +70,9 @@ export const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.3 }}
-              className="bg-white p-8 rounded-2xl shadow-xl flex items-center gap-6 border-b-4 border-[#C8A400]"
+              className="bg-white p-8 rounded-2xl shadow-xl flex items-center gap-6 border-b-4 border-[#C4A862]"
             >
-              <div className="p-4 bg-[#FDF9EC] rounded-xl text-[#166534]">
+              <div className="p-4 bg-[#FAF8F0] rounded-xl text-[#1B2A4A]">
                 <stat.icon size={32} />
               </div>
               <div>
@@ -89,7 +89,7 @@ export const Home = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="section-title">Our Motto</h2>
           <p className="text-2xl text-gray-700 leading-relaxed font-light italic">
-            "Learning with discipline, respect, and pride."
+            "Rational Co-operation Leads to Success"
           </p>
         </div>
       </section>

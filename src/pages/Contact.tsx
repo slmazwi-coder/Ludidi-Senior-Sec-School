@@ -17,10 +17,10 @@ export const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
-            <h2 className="text-2xl font-bold text-[#166534] mb-8">Get in Touch</h2>
+            <h2 className="text-2xl font-bold text-[#1B2A4A] mb-8">Get in Touch</h2>
             <div className="space-y-8">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-[#FDF9EC] text-[#166534] rounded-xl">
+                <div className="p-3 bg-[#FAF8F0] text-[#1B2A4A] rounded-xl">
                   <MapPin size={24} />
                 </div>
                 <div>
@@ -29,16 +29,17 @@ export const Contact = () => {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-[#FDF9EC] text-[#166534] rounded-xl">
+                <div className="p-3 bg-[#FAF8F0] text-[#1B2A4A] rounded-xl">
                   <Phone size={24} />
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900">Phone</h3>
                   <p className="text-gray-600">{info.phone}</p>
+                  <p className="text-gray-600">082 208 7784</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-[#FDF9EC] text-[#166534] rounded-xl">
+                <div className="p-3 bg-[#FAF8F0] text-[#1B2A4A] rounded-xl">
                   <Mail size={24} />
                 </div>
                 <div>
@@ -47,7 +48,7 @@ export const Contact = () => {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-[#FDF9EC] text-[#166534] rounded-xl">
+                <div className="p-3 bg-[#FAF8F0] text-[#1B2A4A] rounded-xl">
                   <Clock size={24} />
                 </div>
                 <div>
@@ -60,8 +61,8 @@ export const Contact = () => {
 
             <div className="mt-10 sm:mt-12 rounded-3xl overflow-hidden h-[260px] sm:h-[320px] border-4 border-gray-100 shadow-inner bg-gray-50 relative">
               <iframe
-                title="Lupindo SSS Location"
-                src="https://www.google.com/maps?q=-30.40676,28.70707&z=15&output=embed"
+                title="Ramafole SSS Location"
+                src="https://www.google.com/maps?q=-30.6908,28.5042&z=15&output=embed"
                 className="w-full h-full border-0"
                 loading="lazy"
               />
@@ -74,13 +75,13 @@ export const Contact = () => {
             transition={{ duration: 0.3, delay: 0.05 }}
             className="bg-gray-50 p-6 sm:p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm"
           >
-            <h2 className="text-2xl font-bold text-[#166534] mb-8">Send us a Message</h2>
+            <h2 className="text-2xl font-bold text-[#1B2A4A] mb-8">Send us a Message</h2>
             <form className="space-y-6">
               <div className="space-y-2">
                 <label className="text-sm font-bold text-gray-700">Full Name</label>
                 <input
                   type="text"
-                  className="w-full p-4 rounded-xl bg-white border border-gray-200 focus:ring-2 focus:ring-[#C8A400]/20 outline-none"
+                  className="w-full p-4 rounded-xl bg-white border border-gray-200 focus:ring-2 focus:ring-[#C4A862]/20 outline-none"
                   placeholder="Your name"
                 />
               </div>
@@ -88,7 +89,7 @@ export const Contact = () => {
                 <label className="text-sm font-bold text-gray-700">Email Address</label>
                 <input
                   type="email"
-                  className="w-full p-4 rounded-xl bg-white border border-gray-200 focus:ring-2 focus:ring-[#C8A400]/20 outline-none"
+                  className="w-full p-4 rounded-xl bg-white border border-gray-200 focus:ring-2 focus:ring-[#C4A862]/20 outline-none"
                   placeholder="Your email"
                 />
               </div>
@@ -96,7 +97,7 @@ export const Contact = () => {
                 <label className="text-sm font-bold text-gray-700">Subject</label>
                 <input
                   type="text"
-                  className="w-full p-4 rounded-xl bg-white border border-gray-200 focus:ring-2 focus:ring-[#C8A400]/20 outline-none"
+                  className="w-full p-4 rounded-xl bg-white border border-gray-200 focus:ring-2 focus:ring-[#C4A862]/20 outline-none"
                   placeholder="What is this regarding?"
                 />
               </div>
@@ -104,12 +105,16 @@ export const Contact = () => {
                 <label className="text-sm font-bold text-gray-700">Message</label>
                 <textarea
                   rows={4}
-                  className="w-full p-4 rounded-xl bg-white border border-gray-200 focus:ring-2 focus:ring-[#C8A400]/20 outline-none resize-none"
-                  placeholder="How can we help you?"
+                  className="w-full p-4 rounded-xl bg-white border border-gray-200 focus:ring-2 focus:ring-[#C4A862]/20 outline-none resize-none"
+                  placeholder="Your message..."
                 />
               </div>
-              <button className="btn-primary w-full py-4 flex items-center justify-center gap-2" type="button">
-                Send Message <Send size={18} />
+              <button
+                type="submit"
+                className="w-full py-4 rounded-xl font-bold text-white flex items-center justify-center gap-2 transition-all hover:shadow-lg"
+                style={ { background: '#1B2A4A' } }
+              >
+                <Send size={18} /> Send Message
               </button>
             </form>
           </motion.div>

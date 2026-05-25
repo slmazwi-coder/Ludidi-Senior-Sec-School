@@ -76,7 +76,7 @@ export const DocumentsEditor = () => {
     <div>
       <div className="flex items-center justify-between mb-8">
         <h1 className="text-2xl font-bold">Document Management</h1>
-        <button onClick={() => setShowUpload(!showUpload)} className="flex items-center gap-2 bg-[#C8A400] text-white px-4 py-2 rounded-xl font-medium hover:bg-[#540D1C]">
+        <button onClick={() => setShowUpload(!showUpload)} className="flex items-center gap-2 bg-[#C4A862] text-white px-4 py-2 rounded-xl font-medium hover:bg-[#0F1A2E]">
           <Plus size={18} /> Upload Document
         </button>
       </div>
@@ -112,7 +112,7 @@ export const DocumentsEditor = () => {
             <button 
               onClick={addDocument} 
               disabled={!newDoc.fileData || isScanning} 
-              className="bg-[#C8A400] text-white px-6 py-2 rounded-xl font-medium hover:bg-[#540D1C] disabled:opacity-50"
+              className="bg-[#C4A862] text-white px-6 py-2 rounded-xl font-medium hover:bg-[#0F1A2E] disabled:opacity-50"
             >
               {isScanning ? (
                 <><Loader2 size={18} className="animate-spin" /> Scanning...</>

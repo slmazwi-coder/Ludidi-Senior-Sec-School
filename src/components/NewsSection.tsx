@@ -13,10 +13,10 @@ export const NewsSection = () => {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between mb-10">
-          <h2 className="text-3xl font-bold text-[#166534] flex items-center gap-2">
+          <h2 className="text-3xl font-bold text-[#1B2A4A] flex items-center gap-2">
             <Bell className="text-yellow-500" /> News & Notices
           </h2>
-          <button className="text-[#166534] font-semibold hover:underline">View All</button>
+          <button className="text-[#1B2A4A] font-semibold hover:underline">View All</button>
         </div>
 
         {notices.length === 0 ? (
@@ -26,7 +26,7 @@ export const NewsSection = () => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {notices.map((notice) => (
-              <div key={notice.id} className="card flex flex-col h-full border-l-4 border-l-[#C8A400]">
+              <div key={notice.id} className="card flex flex-col h-full border-l-4 border-l-[#C4A862]">
                 <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
                   <Calendar size={14} />
                   <span>{notice.date}</span>
@@ -36,7 +36,7 @@ export const NewsSection = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-800">{notice.title}</h3>
                 <p className="text-gray-600 line-clamp-3 mb-4 flex-grow">{notice.content}</p>
-                <button className="text-[#166534] font-medium flex items-center gap-1 hover:gap-2 transition-all">
+                <button className="text-[#1B2A4A] font-medium flex items-center gap-1 hover:gap-2 transition-all">
                   Read More <Info size={16} />
                 </button>
               </div>
