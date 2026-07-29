@@ -74,7 +74,7 @@ const categories = [
   'Support Staff',
 ];
 
-const StaffCard = ({ member }: { member: StaffMember }) => (
+const StaffCard = ({ member }: { member: StaffMember; key?: React.Key }) => (
   <div
     className="rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-center p-6 text-center hover:-translate-y-1"
     style={ { background: '#FFFBEF', border: '1px solid #C8A400' } }
@@ -128,7 +128,7 @@ export const Staff = () => {
           </h1>
           <div className="w-16 h-1 mx-auto rounded-full mb-4" style={ { background: '#C8A400' } } />
           <p className="text-gray-500 text-base max-w-2xl mx-auto">
-            Meet the dedicated team of educators and support staff at Lupindo Senior Secondary School.
+            Meet the dedicated team of educators and support staff at Ludidi Senior Secondary School.
           </p>
         </div>
 
