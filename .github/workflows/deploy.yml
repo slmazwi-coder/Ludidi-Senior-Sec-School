@@ -40,12 +40,12 @@ jobs:
       - name: Sync files to public_html
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          server: ${{ secrets.LUDIDI_FTP_SERVER }}
-          username: ${{ secrets.LUDIDI_FTP_USERNAME }}
-          password: ${{ secrets.LUDIDI_FTP_PASSWORD }}
+          server: ${{ secrets.LUDIDI_FTP_SERVER || secrets.FTP_HOST }}
+          username: ${{ secrets.LUDIDI_FTP_USERNAME || secrets.FTP_USERNAME }}
+          password: ${{ secrets.LUDIDI_FTP_PASSWORD || secrets.FTP_PASSWORD }}
           server-dir: public_html/
-          port: 21
-          protocol: ftps
+          port: ${{ secrets.LUDIDI_FTP_PORT || secrets.FTP_PORT || '21' }}
+          protocol: ${{ secrets.LUDIDI_FTP_PROTOCOL || secrets.FTP_PROTOCOL || 'ftps' }}
           local-dir: ./dist/
           state-name: .ftp-deploy-sync-state-public.json
           dry-run: false
@@ -53,12 +53,12 @@ jobs:
       - name: Sync files to private_html
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          server: ${{ secrets.LUDIDI_FTP_SERVER }}
-          username: ${{ secrets.LUDIDI_FTP_USERNAME }}
-          password: ${{ secrets.LUDIDI_FTP_PASSWORD }}
+          server: ${{ secrets.LUDIDI_FTP_SERVER || secrets.FTP_HOST }}
+          username: ${{ secrets.LUDIDI_FTP_USERNAME || secrets.FTP_USERNAME }}
+          password: ${{ secrets.LUDIDI_FTP_PASSWORD || secrets.FTP_PASSWORD }}
           server-dir: private_html/
-          port: 21
-          protocol: ftps
+          port: ${{ secrets.LUDIDI_FTP_PORT || secrets.FTP_PORT || '21' }}
+          protocol: ${{ secrets.LUDIDI_FTP_PROTOCOL || secrets.FTP_PROTOCOL || 'ftps' }}
           local-dir: ./dist/
           state-name: .ftp-deploy-sync-state-private.json
           dry-run: false
