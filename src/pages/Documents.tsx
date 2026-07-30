@@ -31,7 +31,7 @@ export const Documents = () => {
 
   const filteredDocs = allDocs.filter(doc => 
     doc.grade === selectedGrade && 
-    doc.title.toLowerCase().includes(searchQuery.toLowerCase())
+    doc.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
@@ -85,7 +85,7 @@ export const Documents = () => {
                     <FileText size={24} />
                   </div>
                   <div className="flex-grow">
-                    <h3 className="font-bold text-gray-800 mb-1">{doc.title}</h3>
+                    <h3 className="font-bold text-gray-800 mb-1">{doc.name}</h3>
                     <p className="text-sm text-gray-500 mb-4">Resource • {doc.grade}</p>
                     <button 
                       onClick={() => handleDownload(doc)}

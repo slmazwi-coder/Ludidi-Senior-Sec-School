@@ -3,11 +3,11 @@ import { AnimatePresence, motion } from 'motion/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
-  { url: './lshero1.png'},  caption: 'Academic excellence' },
-  { url: './lshero2.png'},  caption: 'Amidst difficulties we rise' },
-  { url: './lshero3.png'},  caption: 'Provincial athletics champions' },
-  { url: './lshero4.png'},  caption: 'Our learners, our pride' },
-  { url: './lshero5.png'},  caption: 'Celebrating achievement' },
+  { url: './lshero1.png',  caption: 'Academic excellence' },
+  { url: './lshero2.png',  caption: 'Amidst difficulties we rise' },
+  { url: './lshero3.png',  caption: 'Provincial athletics champions' },
+  { url: './lshero4.png',  caption: 'Our learners, our pride' },
+  { url: './lshero5.png',  caption: 'Celebrating achievement' },
   { url: './assets/hero/lshero1.png',  caption: 'Discipline and hard work' },
   { url: './assets/hero/lshero2.png',  caption: 'The spirit of Lupindo SSS' },
   { url: './assets/hero/lshero3.png',  caption: 'Medal winners — Eastern Cape' },
