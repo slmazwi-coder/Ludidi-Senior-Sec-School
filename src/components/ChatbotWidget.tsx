@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { MessageCircle, X, Send, Globe, ChevronDown, Sparkles } from 'lucide-react';
 import { getApplications, type Application } from '../admin/utils/storage';
+import { generateChatResponse } from '../services/geminiService';
 
 // ── Types ──────────────────────────────────────────────────────────────────
 type ChatRole = 'user' | 'bot';
@@ -132,7 +133,7 @@ async function translateText(text: string, src: SupportedLang, tgt: SupportedLan
   }
 }
 
-// ── Claude AI (Anthropic) ────────────────────────────────────────────────────
+// ── Gemini AI ─────────────────────────────────────────────────────────────────
 const SYSTEM_PROMPT = `You are a warm, knowledgeable and friendly assistant for Ludidi Senior Secondary School in Matatiele, Eastern Cape, South Africa.
 
 You help parents, learners, guardians and community members with anything about the school:
@@ -159,38 +160,13 @@ School details:
 
 Be warm, clear and concise. Always encourage. If you are unsure about something very specific, direct them to call or email the school.`;
 
-async function askClaude(userMessage: string): Promise<string> {
+async function askGemini(userMessage: string): Promise<string> {
   try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        system: SYSTEM_PROMPT,
-        messages: [{ role: 'user', content: userMessage }],
-      }),
-    });
-
-    if (!response.ok) {
-      const errText = await response.text();
-      console.warn('[Chatbot] Claude API error:', response.status, errText);
-      throw new Error(`HTTP ${response.status}`);
-    }
-
-    const data = await response.json();
-    const text = data?.content
-      ?.filter((b: any) => b.type === 'text')
-      .map((b: any) => b.text)
-      .join('\n')
-      .trim();
-
+    const text = await generateChatResponse(userMessage, SYSTEM_PROMPT);
     if (!text) throw new Error('Empty response');
     return text;
   } catch (err) {
-    console.error('[Chatbot] Claude request failed:', err);
+    console.error('[Chatbot] Gemini request failed:', err);
     return 'I\'m having trouble connecting right now. Please contact the school directly at +27 71 167 3161 or 200500449@ecschools.org.za.';
   }
 }
@@ -281,8 +257,8 @@ export function ChatbotWidget(props: { defaultOpen?: boolean }) {
         ? await translateText(text, detectedLang, 'eng')
         : text;
 
-      // 4. Ask Claude
-      const englishReply = await askClaude(englishText);
+      // 4. Ask Gemini
+      const englishReply = await askGemini(englishText);
 
       // 5. Translate reply back if needed
       const finalReply = detectedLang !== 'eng'
