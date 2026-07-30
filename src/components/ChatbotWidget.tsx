@@ -31,7 +31,6 @@ const VULAVULA_LANG_MAP: Record<SupportedLang, string> = {
 const QUICK_QUESTIONS = [
   'How do I apply for admission?',
   'What documents do I need?',
-  'Is boarding available?',
   'What are the school hours?',
 ];
 
@@ -137,9 +136,8 @@ async function translateText(text: string, src: SupportedLang, tgt: SupportedLan
 const SYSTEM_PROMPT = `You are a warm, knowledgeable and friendly assistant for Ludidi Senior Secondary School in Matatiele, Eastern Cape, South Africa.
 
 You help parents, learners, guardians and community members with anything about the school:
-- Admissions and application process (general and boarding)
+- Admissions and application process
 - Required documents for applications
-- Boarding / hostel information (HTL 02 & HTL 03 forms, bursaries)
 - School fees, payment and financial assistance
 - School hours and term dates
 - Staff, departments and contact information
@@ -157,7 +155,7 @@ School details:
 - Principal: Mr S.S. Mafunda
 - School hours: Monday–Thursday 07:30–15:30, Friday 07:30–13:30
 - Grades: Grade 8 to Grade 12
-- 2027 applications currently open (general and boarding)
+- 2027 applications currently open
 
 Be warm, clear and concise. Always encourage. If you are unsure about something very specific, direct them to call or email the school.`;
 
@@ -209,7 +207,7 @@ export function ChatbotWidget(props: { defaultOpen?: boolean }) {
       id: uid(),
       role: 'bot',
       createdAt: Date.now(),
-      text: "👋 Hello! Let me help you! Whether it's admissions, boarding, fees, results, activities or anything else about Ludidi SSS — just ask and I'll be happy to assist.",
+      text: "👋 Hello! Let me help you! Whether it's admissions, fees, results, activities or anything else about Ludidi SSS — just ask and I'll be happy to assist.",
     },
   ]);
 
