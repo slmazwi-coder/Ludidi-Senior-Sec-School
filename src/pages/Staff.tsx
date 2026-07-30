@@ -12,65 +12,111 @@ interface StaffMember {
 const staffData: StaffMember[] = [
   // ── Leadership ──────────────────────────────────────────────────────────
   {
-    name: 'Mr S.S. Mafunda',
+    name: 'Mafunda S.S',
     position: 'Principal',
     category: 'Leadership',
-    image: './assets/about/principal.jpg',
-  },
-  {
-    name: 'Deputy Principal',
-    position: 'Deputy Principal',
-    category: 'Leadership',
+    image: '/assets/about/principal.jpg',
   },
 
-  // ── Departmental Heads ───────────────────────────────────────────────────
-  // Update names below via the Staff Portal once confirmed
+  // ── School Management Team ─────────────────────────────────────────────
   {
-    name: 'HOD — Humanities',
-    position: 'Head of Department',
-    subject: 'Humanities',
-    category: 'Departmental Heads',
+    name: 'Ludidi L. V',
+    position: 'Departmental Head',
+    subject: 'NS Gr8-9 and Technology Gr8-9',
+    category: 'School Management Team',
   },
   {
-    name: 'HOD — Mathematics & Science',
-    position: 'Head of Department',
-    subject: 'Mathematics & Science',
-    category: 'Departmental Heads',
+    name: 'Mbingo N. P',
+    position: 'Educator & SMT',
+    subject: 'IsiXhosa HL Gr8-9 and Creative arts Gr8-9',
+    category: 'School Management Team',
   },
   {
-    name: 'HOD — Languages',
-    position: 'Head of Department',
-    subject: 'Languages',
-    category: 'Departmental Heads',
+    name: 'Mahlaba K',
+    position: 'Educator & SMT',
+    subject: 'Mathematics Gr8, 11 & 12',
+    category: 'School Management Team',
+  },
+  {
+    name: 'Mthembu M. P',
+    position: 'Educator & SMT',
+    subject: 'Life Sciences Gr10-11 and Life Orientation Gr9-11',
+    category: 'School Management Team',
   },
 
-  // ── Class Teachers ───────────────────────────────────────────────────────
-  { name: 'Class Teacher', position: 'Class Teacher — Grade 8A',  category: 'Class Teachers' },
-  { name: 'Class Teacher', position: 'Class Teacher — Grade 8B',  category: 'Class Teachers' },
-  { name: 'Class Teacher', position: 'Class Teacher — Grade 8C',  category: 'Class Teachers' },
-  { name: 'Class Teacher', position: 'Class Teacher — Grade 9A',  category: 'Class Teachers' },
-  { name: 'Class Teacher', position: 'Class Teacher — Grade 9B',  category: 'Class Teachers' },
-  { name: 'Class Teacher', position: 'Class Teacher — Grade 9C',  category: 'Class Teachers' },
-  { name: 'Class Teacher', position: 'Class Teacher — Grade 10A', category: 'Class Teachers' },
-  { name: 'Class Teacher', position: 'Class Teacher — Grade 10B', category: 'Class Teachers' },
-  { name: 'Class Teacher', position: 'Class Teacher — Grade 10C', category: 'Class Teachers' },
-  { name: 'Class Teacher', position: 'Class Teacher — Grade 11A', category: 'Class Teachers' },
-  { name: 'Class Teacher', position: 'Class Teacher — Grade 11B', category: 'Class Teachers' },
-  { name: 'Class Teacher', position: 'Class Teacher — Grade 11C', category: 'Class Teachers' },
-  { name: 'Class Teacher', position: 'Class Teacher — Grade 12A', category: 'Class Teachers' },
-  { name: 'Class Teacher', position: 'Class Teacher — Grade 12B', category: 'Class Teachers' },
-  { name: 'Class Teacher', position: 'Class Teacher — Grade 12C', category: 'Class Teachers' },
+  // ── Educators ──────────────────────────────────────────────────────────
+  {
+    name: 'Bilibane P',
+    position: 'Educator',
+    subject: 'Geography Gr10 and IsiXhosa HL Gr10-12',
+    category: 'Educators',
+  },
+  {
+    name: 'Moyakhe N',
+    position: 'Educator',
+    subject: 'Geography Gr11-12 and Tourism Gr11-12',
+    category: 'Educators',
+  },
+  {
+    name: 'Ndabambi T.J',
+    position: 'Educator',
+    subject: 'Business Studies Gr10-12',
+    category: 'Educators',
+  },
+  {
+    name: 'Ndonyela Z. B',
+    position: 'Educator',
+    subject: 'Maths Literacy Gr10-12 & Mathematics Gr9',
+    category: 'Educators',
+  },
+  {
+    name: 'Nonti L.',
+    position: 'Educator',
+    subject: 'English FAL Gr9-12',
+    category: 'Educators',
+  },
+  {
+    name: 'Sicongwana M.',
+    position: 'Educator',
+    subject: 'History Gr11-12 & English FAL Gr8, Tourism Gr10',
+    category: 'Educators',
+  },
+  {
+    name: 'Tshazi B.',
+    position: 'Educator',
+    subject: 'Agricultural Sciences Gr10-12 & Life Sciences Gr12',
+    category: 'Educators',
+  },
+  {
+    name: 'Ziphathe T',
+    position: 'Educator',
+    subject: 'Physical Sciences Gr10-12 & Mathematics Gr10',
+    category: 'Educators',
+  },
+  {
+    name: 'Dlamini M.',
+    position: 'Educator',
+    subject: 'Social Sciences Gr8-9 & LO Gr12',
+    category: 'Educators',
+  },
+  {
+    name: 'Malamlela Z.',
+    position: 'Educator',
+    subject: 'History Gr10 & Life Orientation Gr8',
+    category: 'Educators',
+  },
 
   // ── Support Staff ────────────────────────────────────────────────────────
-  { name: 'School Administrator', position: 'School Administrator', category: 'Support Staff' },
-  { name: 'Security Officer',     position: 'Security Officer',     category: 'Support Staff' },
-  { name: 'Learner Support Agent',position: 'Learner Support Agent',category: 'Support Staff' },
+  { name: 'Gcinilizwe N. V', position: 'Admin', category: 'Support Staff' },
+  { name: 'Mbalana Z', position: 'EPWP Security', category: 'Support Staff' },
+  { name: 'Lugayeni Z. P', position: 'SBCA EPWP', category: 'Support Staff' },
+  { name: 'Gcinilizwe P', position: 'Transport Patroller', category: 'Support Staff' },
 ];
 
 const categories = [
   'Leadership',
-  'Departmental Heads',
-  'Class Teachers',
+  'School Management Team',
+  'Educators',
   'Support Staff',
 ];
 

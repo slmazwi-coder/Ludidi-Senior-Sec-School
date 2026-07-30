@@ -296,11 +296,11 @@ export const Admissions = () => {
               <div>
                 <h2 className="text-2xl font-bold">Application for Admission to School</h2>
                 <p className="text-white/70 text-sm mt-1">
-                  Ludidi Senior Secondary School &nbsp;·&nbsp; Ludidi A/A, Matatiele 4730
+                  Ludidi Senior Secondary School &nbsp;·&nbsp; Lukholweni Location, Ludidi A/A, Matatiele 4730
                 </p>
               </div>
               <div className="text-right text-sm text-white/70">
-                <div>Tel: +27 71 167 3161</div>
+                <div>Tel: 066 203 0097</div>
                 <div>Step {step} of 3</div>
               </div>
             </div>

@@ -310,8 +310,8 @@ export const setApplications = (items: Application[]) => setItems('admin_applica
 
 // Contact
 const defaultContact: ContactInfo = {
-  address: 'Ludidi A/A, P.O. Box 1809, Matatiele, 4730 (Eastern Cape)',
-  phone: '+27 71 167 3161',
+  address: 'Lukholweni Location, Ludidi A/A, Matatiele, 4730 (Eastern Cape)',
+  phone: '066 203 0097',
   email: '200500449@ecschools.org.za',
   monThu: '07:30 - 15:30',
   friday: '07:30 - 13:30',
@@ -323,9 +323,10 @@ export const setContact = (info: ContactInfo) => setObject('admin_contact', info
 // About
 const defaultAbout: AboutInfo = {
   historyParagraphs: [
-    'Ludidi Senior Secondary School is a public school proudly serving learners at Ludidi A/A, Matatiele, in the Alfred Nzo West District of the Eastern Cape.',
-    'Located within the Nunge Circuit under CMC Matatiele, Ludidi SSS is committed to academic excellence, disciplined learning, and community values. Our motto — "Amidst difficulties we rise" — reflects the spirit of every learner who walks through our doors.',
-    'Parents and guardians are encouraged to engage actively with the school through meetings, events, and ongoing learner support. Together we build a culture of achievement and pride.',
+    'Ludidi Senior Secondary School is a public school proudly serving learners at Lukholweni Location, Ludidi A/A, Matatiele, in the Alfred Nzo West District of the Eastern Cape. The school falls under the Nunge Circuit and CMC Matatiele.',
+    'Our mission is to provide quality, inclusive education that equips learners with sound academic knowledge, critical thinking abilities, and practical business skills. Despite being situated in a rural area, we strive to prepare learners to compete effectively beyond their immediate environment, think independently, and sustain themselves through further education, entrepreneurship, or meaningful employment.',
+    'Our vision is to be a centre of educational excellence that develops confident, independent, and globally competitive learners, proving that demographic and geographic location do not limit academic achievement, innovation, or future success.',
+    'Our motto — "Amidst difficulties we rise" — reflects the spirit of every learner who walks through our doors. Our values are: Be punctual, Respect everyone, Protect children, Keep information private, Care for property, and Be professional.',
   ],
   principalName: 'Mr S.S. Mafunda',
   principalTitle: 'Principal',
@@ -341,9 +342,10 @@ export const setAbout = (info: AboutInfo) => setObject('admin_about', info);
 const defaultActivities: Activity[] = [
   { id: '1', name: 'Soccer', category: 'Sport', description: 'Training and competition at school and district level.', image: '' },
   { id: '2', name: 'Netball', category: 'Sport', description: 'Competitive teams across age groups.', image: '' },
-  { id: '3', name: 'Athletics', category: 'Sport', description: 'Track and field development and competition.', image: '' },
-  { id: '4', name: 'Debating', category: 'Academic', description: 'Building critical thinking and communication skills.', image: '' },
-  { id: '5', name: 'Choir', category: 'Culture', description: 'Music and performance for school events and competitions.', image: '' },
+  { id: '3', name: 'School Choir', category: 'Culture', description: 'Music and performance for school events and competitions.', image: '' },
+  { id: '4', name: 'Ugqaphu', category: 'Sport', description: 'Traditional cultural and sporting engagement.', image: '' },
+  { id: '5', name: 'Mrwabarwaba', category: 'Sport', description: 'Traditional team activity and competition.', image: '' },
+  { id: '6', name: 'Debating', category: 'Academic', description: 'Building critical thinking and communication skills.', image: '' },
 ];
 export const getActivities = () => (getItems<Activity>('admin_activities').length ? getItems<Activity>('admin_activities') : defaultActivities);
 export const setActivities = (items: Activity[]) => setItems('admin_activities', items);

@@ -148,8 +148,8 @@ You help parents, learners, guardians and community members with anything about 
 
 School details:
 - Name: Ludidi Senior Secondary School
-- Location: Ludidi A/A, Matatiele, 4730 (Eastern Cape)
-- Phone: +27 71 167 3161
+- Location: Lukholweni Location, Ludidi A/A, Matatiele, 4730 (Eastern Cape)
+- Phone: 066 203 0097
 - Email: 200500449@ecschools.org.za
 - Motto: "Amidst difficulties we rise"
 - Principal: Mr S.S. Mafunda

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trophy, CalendarDays, Target, Users, Flag } from 'lucide-react';
+import { Trophy, CalendarDays, Target, Users, Flag, Music, Flame } from 'lucide-react';
 
 const sports = [
   {
@@ -13,9 +13,19 @@ const sports = [
     icon: Users,
   },
   {
-    name: 'Athletics',
-    description: 'Track and field events to develop speed, strength, and endurance.',
-    icon: Trophy,
+    name: 'School Choir',
+    description: 'Music and performance for school events and competitions.',
+    icon: Music,
+  },
+  {
+    name: 'Ugqaphu',
+    description: 'Traditional cultural and sporting engagement.',
+    icon: Flame,
+  },
+  {
+    name: 'Mrwabarwaba',
+    description: 'Traditional team activity and competition.',
+    icon: Flag,
   },
 ];
 
@@ -38,13 +48,17 @@ type Result = {
 const fixtures: Fixture[] = [
   { date: 'TBA', sport: 'Soccer', opponent: 'TBA', venue: 'TBA', time: 'TBA' },
   { date: 'TBA', sport: 'Netball', opponent: 'TBA', venue: 'TBA', time: 'TBA' },
-  { date: 'TBA', sport: 'Athletics', opponent: 'TBA', venue: 'TBA', time: 'TBA' },
+  { date: 'TBA', sport: 'School Choir', opponent: 'TBA', venue: 'TBA', time: 'TBA' },
+  { date: 'TBA', sport: 'Ugqaphu', opponent: 'TBA', venue: 'TBA', time: 'TBA' },
+  { date: 'TBA', sport: 'Mrwabarwaba', opponent: 'TBA', venue: 'TBA', time: 'TBA' },
 ];
 
 const results: Result[] = [
   { date: 'TBA', sport: 'Soccer', opponent: 'TBA', venue: 'TBA', result: 'TBA' },
   { date: 'TBA', sport: 'Netball', opponent: 'TBA', venue: 'TBA', result: 'TBA' },
-  { date: 'TBA', sport: 'Athletics', opponent: 'TBA', venue: 'TBA', result: 'TBA' },
+  { date: 'TBA', sport: 'School Choir', opponent: 'TBA', venue: 'TBA', result: 'TBA' },
+  { date: 'TBA', sport: 'Ugqaphu', opponent: 'TBA', venue: 'TBA', result: 'TBA' },
+  { date: 'TBA', sport: 'Mrwabarwaba', opponent: 'TBA', venue: 'TBA', result: 'TBA' },
 ];
 
 export const Sport = () => {

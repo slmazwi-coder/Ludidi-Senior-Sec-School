@@ -62,11 +62,11 @@ export const Footer = () => {
             <ul className="space-y-3 text-sm" style={ { color: 'rgba(200,164,0,0.8)' } }>
               <li className="flex items-start gap-2">
                 <MapPin className="shrink-0 mt-0.5" size={16} />
-                <span>Ludidi A/A, P.O. Box 1809, Matatiele, 4730 (Eastern Cape)</span>
+                <span>Lukholweni Location, Ludidi A/A, Matatiele, 4730 (Eastern Cape)</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="shrink-0" />
-                <span>+27 71 167 3161</span>
+                <span>066 203 0097</span>
               </li>
               <li className="flex items-start gap-2">
                 <Mail size={16} className="shrink-0 mt-0.5" />
