@@ -51,7 +51,7 @@ async function fileToDataUrl(file: File): Promise<string> {
 
 const Field = ({
   label, required, children,
-}: { label: string; required?: boolean; children: React.ReactNode }) => (
+}: { label: string; required?: boolean; children: React.ReactNode; key?: React.Key }) => (
   <div className="flex flex-col gap-1">
     <label className="text-xs font-semibold text-gray-600 uppercase tracking-wide">
       {label}{required && <span className="text-red-500 ml-0.5">*</span>}
@@ -274,7 +274,7 @@ export const Admissions = () => {
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Application Submitted!</h2>
           <p className="text-gray-600 mb-8">
-            Thank you for applying to Lupindo Senior Secondary School. We have received your application and will be in contact shortly.
+            Thank you for applying to Ludidi Senior Secondary School. We have received your application and will be in contact shortly.
           </p>
           <a href="/" className="btn-primary w-full inline-block">Back to Home</a>
         </motion.div>
@@ -310,11 +310,11 @@ export const Admissions = () => {
               <div>
                 <h2 className="text-2xl font-bold">Application for Admission to School</h2>
                 <p className="text-white/70 text-sm mt-1">
-                  Lupindo Senior Secondary School &nbsp;·&nbsp; Igoga Location, Matatiele 4730
+                  Ludidi Senior Secondary School &nbsp;·&nbsp; Ludidi A/A, Matatiele 4730
                 </p>
               </div>
               <div className="text-right text-sm text-white/70">
-                <div>Tel: 083 - 7175264</div>
+                <div>Tel: +27 71 167 3161</div>
                 <div>Step {step} of 3</div>
               </div>
             </div>

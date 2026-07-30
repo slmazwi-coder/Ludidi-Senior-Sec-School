@@ -24,12 +24,12 @@ export const Footer = () => {
             <div className="flex items-center gap-3 mb-3">
               <div className="h-12 w-12 shrink-0 rounded-xl overflow-hidden shadow-lg"
                 style={ { background: '#C8A400', border: '2px solid #C8A400' } }>
-                <img src="/lslogo.png" alt="Lupindo SSS logo"
+                <img src="/lslogo.png" alt="Ludidi SSS logo"
                   className="h-full w-full object-cover" />
               </div>
               <div>
                 <h3 className="text-base font-bold leading-tight" style={ { color: '#C8A400' } }>
-                  Lupindo Senior Secondary School
+                  Ludidi Senior Secondary School
                 </h3>
                 <p className="text-sm italic mt-0.5" style={ { color: 'rgba(200,164,0,0.65)' } }>
                   "Amidst difficulties we rise"
@@ -38,13 +38,13 @@ export const Footer = () => {
             </div>
 
             <div className="flex gap-3 mt-4">
-              <a href="https://www.facebook.com/lupindosss/" target="_blank" rel="noreferrer"
+              <a href="https://www.facebook.com/ludidisss/" target="_blank" rel="noreferrer"
                 className="p-2 rounded-full transition-colors"
                 style={ { background: 'rgba(200,164,0,0.15)', color: '#C8A400' } }
                 aria-label="Facebook">
                 <Facebook size={18} />
               </a>
-              <a href="https://www.tiktok.com/@lupindosss" target="_blank" rel="noreferrer"
+              <a href="https://www.tiktok.com/@ludidisss" target="_blank" rel="noreferrer"
                 className="p-2 rounded-full transition-colors"
                 style={ { background: 'rgba(200,164,0,0.15)', color: '#C8A400' } }
                 aria-label="TikTok">
@@ -62,11 +62,11 @@ export const Footer = () => {
             <ul className="space-y-3 text-sm" style={ { color: 'rgba(200,164,0,0.8)' } }>
               <li className="flex items-start gap-2">
                 <MapPin className="shrink-0 mt-0.5" size={16} />
-                <span>Lukholweni Location, P.O. Box 1809, Matatiele, 4730 (Eastern Cape)</span>
+                <span>Ludidi A/A, P.O. Box 1809, Matatiele, 4730 (Eastern Cape)</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="shrink-0" />
-                <span>+27 78 013 8492</span>
+                <span>+27 71 167 3161</span>
               </li>
               <li className="flex items-start gap-2">
                 <Mail size={16} className="shrink-0 mt-0.5" />
@@ -100,7 +100,7 @@ export const Footer = () => {
 
         {/* Bottom bar */}
         <div className="pt-6 text-center text-xs" style={ { borderTop: '1px solid rgba(200,164,0,0.15)', color: 'rgba(200,164,0,0.5)' } }>
-          <p>© {new Date().getFullYear()} Lupindo Senior Secondary School. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} Ludidi Senior Secondary School. All Rights Reserved.</p>
           <Link to="/admin/login"
             className="text-xs mt-2 inline-block transition-colors hover:opacity-80"
             style={ { color: 'rgba(200,164,0,0.3)' } }>

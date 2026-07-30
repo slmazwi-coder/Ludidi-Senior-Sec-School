@@ -32,7 +32,7 @@ const inp = 'border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-800 f
 const sel = inp + ' cursor-pointer';
 
 const Field = ({ label, required, children, className = '' }: {
-  label: string; required?: boolean; children: React.ReactNode; className?: string;
+  label: string; required?: boolean; children: React.ReactNode; className?: string; key?: React.Key;
 }) => (
   <div className={`flex flex-col gap-1 ${className}`}>
     <label className="text-xs font-semibold text-gray-600 uppercase tracking-wide">
@@ -70,6 +70,7 @@ const FileUploadRow = ({ label, required, fileKey, files, onChange }: {
   label: string; required?: boolean; fileKey: string;
   files: Record<string, File | null>;
   onChange: (key: string, file: File | null) => void;
+  key?: React.Key;
 }) => {
   const file = files[fileKey];
   return (
@@ -536,10 +537,10 @@ export const Boarding = () => {
                           <input className={inp} type="number" min={0} value={learner.distanceHomeToSchool} onChange={e => patchL('distanceHomeToSchool', e.target.value)} />
                         </Field>
                         <Field label="Name & Address of School Admitted To" className="sm:col-span-2">
-                          <input className={inp} value={learner.schoolNameAndAddress} onChange={e => patchL('schoolNameAndAddress', e.target.value)} placeholder="Lupindo SSS, Igoga Location, Matatiele" />
+                          <input className={inp} value={learner.schoolNameAndAddress} onChange={e => patchL('schoolNameAndAddress', e.target.value)} placeholder="Ludidi SSS, Ludidi A/A, Matatiele" />
                         </Field>
                         <Field label="Surname & First Name(s) of Parent/Guardian" className="sm:col-span-2">
-                          <input className={inp} placeholder="Enter parent/guardian full names" onChange={() => {}} value={`${father.name} ${father.surname}`.trim()} readOnly className={inp + ' bg-gray-50'} />
+                          <input placeholder="Enter parent/guardian full names" onChange={() => {}} value={`${father.name} ${father.surname}`.trim()} readOnly className={inp + ' bg-gray-50'} />
                           <span className="text-xs text-gray-400 mt-0.5">Auto-filled from parent details below</span>
                         </Field>
                       </div>
@@ -572,10 +573,10 @@ export const Boarding = () => {
                               <tr key={k} className="border-t border-gray-100">
                                 <td className="px-3 py-2 bg-gray-50 text-xs font-semibold text-gray-600">{lbl}</td>
                                 <td className="px-2 py-1.5">
-                                  <input className={inp} value={father[k]} onChange={e => patchF(k, e.target.value)} />
+                                  <input className={inp} value={father[k]} onChange={e => patchF(k as string, e.target.value)} />
                                 </td>
                                 <td className="px-2 py-1.5">
-                                  <input className={inp} value={mother[k as keyof typeof mother]} onChange={e => patchM(k, e.target.value)} />
+                                  <input className={inp} value={mother[k as keyof typeof mother]} onChange={e => patchM(k as string, e.target.value)} />
                                 </td>
                               </tr>
                             ))}
@@ -598,8 +599,8 @@ export const Boarding = () => {
                                   {lbl}
                                   {k === 'salaryIncome' && <span className="block text-gray-400 font-normal">(Attach salary advice)</span>}
                                 </td>
-                                <td className="px-2 py-1.5"><input className={inp} value={father[k]} onChange={e => patchF(k, e.target.value)} /></td>
-                                <td className="px-2 py-1.5"><input className={inp} value={mother[k as keyof typeof mother]} onChange={e => patchM(k, e.target.value)} /></td>
+                                <td className="px-2 py-1.5"><input className={inp} value={father[k]} onChange={e => patchF(k as string, e.target.value)} /></td>
+                                <td className="px-2 py-1.5"><input className={inp} value={mother[k as keyof typeof mother]} onChange={e => patchM(k as string, e.target.value)} /></td>
                               </tr>
                             ))}
                           </tbody>
