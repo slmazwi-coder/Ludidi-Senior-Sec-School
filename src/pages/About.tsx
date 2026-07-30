@@ -104,7 +104,7 @@ export const About = () => {
               {/* Principal Photo Column */}
               <div className="flex flex-col items-center justify-center bg-[#166534] p-8 md:p-10">
                 {/* Photo frame */}
-                <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-[#C8A400] shadow-xl mb-5">
+                <div className="w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden border-4 border-[#C8A400] shadow-xl mb-5">
                   {!principalFailed ? (
                     <img
                       src={principalImageUrl}

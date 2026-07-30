@@ -127,7 +127,7 @@ const StaffCard = ({ member }: { member: StaffMember; key?: React.Key }) => (
   >
     {/* Avatar */}
     <div
-      className="w-24 h-24 rounded-2xl flex items-center justify-center mb-4 overflow-hidden"
+      className="w-24 h-24 rounded-full flex items-center justify-center mb-4 overflow-hidden"
       style={ { background: '#FDF9EC', border: '3px solid #C8A400' } }
     >
       {member.image ? (
