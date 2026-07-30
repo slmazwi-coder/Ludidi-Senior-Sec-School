@@ -36,26 +36,6 @@ export const Home = () => {
               </div>
             </div>
 
-            <div className="rounded-3xl border border-gray-200 bg-gray-50 p-6 sm:p-7 flex gap-4 items-start">
-              <div className="p-3 rounded-2xl bg-white border border-gray-200 text-[#166534] shrink-0">
-                <Megaphone size={22} />
-              </div>
-              <div className="min-w-0">
-                <div className="flex flex-wrap items-center gap-2">
-                  <div className="text-sm font-black uppercase tracking-widest text-[#166534]">Boarding</div>
-                  <span className="px-2 py-1 rounded-full text-xs font-bold bg-white border border-gray-200 text-gray-700">
-                    2027
-                  </span>
-                </div>
-                <h3 className="text-xl font-extrabold text-gray-900 mt-2">Boarding applications are now open</h3>
-                <p className="text-gray-700 mt-1">
-                  Hostel accommodation applications for the <span className="font-bold">2027</span> academic year are open.
-                </p>
-                <a href="/boarding" className="mt-4 inline-flex items-center gap-2 text-[#166534] font-bold">
-                  Apply for boarding <ArrowRight size={18} />
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </section>
