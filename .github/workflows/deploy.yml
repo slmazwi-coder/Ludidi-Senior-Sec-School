@@ -40,7 +40,7 @@ jobs:
       - name: Sync files to public_html
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          server: ${{ secrets.LUDIDI_FTP_SERVER || secrets.FTP_HOST }}
+          server: ${{ secrets.LUDIDI_FTP_SERVER || secrets.FTP_SERVER || secrets.FTP_HOST }}
           username: ${{ secrets.LUDIDI_FTP_USERNAME || secrets.FTP_USERNAME }}
           password: ${{ secrets.LUDIDI_FTP_PASSWORD || secrets.FTP_PASSWORD }}
           server-dir: public_html/
@@ -53,7 +53,7 @@ jobs:
       - name: Sync files to private_html
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          server: ${{ secrets.LUDIDI_FTP_SERVER || secrets.FTP_HOST }}
+          server: ${{ secrets.LUDIDI_FTP_SERVER || secrets.FTP_SERVER || secrets.FTP_HOST }}
           username: ${{ secrets.LUDIDI_FTP_USERNAME || secrets.FTP_USERNAME }}
           password: ${{ secrets.LUDIDI_FTP_PASSWORD || secrets.FTP_PASSWORD }}
           server-dir: private_html/
