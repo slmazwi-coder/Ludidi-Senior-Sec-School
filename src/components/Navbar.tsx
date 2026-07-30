@@ -33,16 +33,16 @@ export const Navbar = () => {
               <div className="h-11 w-11 shrink-0 rounded-xl bg-white flex items-center justify-center overflow-hidden shadow-md" style={ { border: '2px solid #166534' } }>
                 <img
                   src="/lslogo.png"
-                  alt="Lupindo SSS logo"
+                  alt="Ludidi SSS logo"
                   className="h-full w-full object-cover"
                 />
               </div>
               <div className="min-w-0">
                 <span className="md:hidden text-sm font-bold block leading-tight" style={ { color: '#166534' } }>
-                  Lupindo SSS
+                  Ludidi SSS
                 </span>
                 <span className="hidden md:block text-base font-bold leading-tight" style={ { color: '#166534' } }>
-                  Lupindo Senior Secondary School
+                  Ludidi Senior Secondary School
                 </span>
                 <span className="text-xs font-semibold tracking-wide uppercase" style={ { color: 'rgba(123,28,46,0.7)' } }>
                   Amidst difficulties we rise

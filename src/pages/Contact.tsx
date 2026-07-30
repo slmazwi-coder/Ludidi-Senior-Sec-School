@@ -60,7 +60,7 @@ export const Contact = () => {
 
             <div className="mt-10 sm:mt-12 rounded-3xl overflow-hidden h-[260px] sm:h-[320px] border-4 border-gray-100 shadow-inner bg-gray-50 relative">
               <iframe
-                title="Lupindo SSS Location"
+                title="Ludidi SSS Location"
                 src="https://www.google.com/maps?q=-30.40676,28.70707&z=15&output=embed"
                 className="w-full h-full border-0"
                 loading="lazy"

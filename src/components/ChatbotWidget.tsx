@@ -134,7 +134,7 @@ async function translateText(text: string, src: SupportedLang, tgt: SupportedLan
 }
 
 // ── Claude AI (Anthropic) ────────────────────────────────────────────────────
-const SYSTEM_PROMPT = `You are a warm, knowledgeable and friendly assistant for Lupindo Senior Secondary School in Matatiele, Eastern Cape, South Africa.
+const SYSTEM_PROMPT = `You are a warm, knowledgeable and friendly assistant for Ludidi Senior Secondary School in Matatiele, Eastern Cape, South Africa.
 
 You help parents, learners, guardians and community members with anything about the school:
 - Admissions and application process (general and boarding)
@@ -149,17 +149,15 @@ You help parents, learners, guardians and community members with anything about 
 - General encouragement and guidance for parents and learners
 
 School details:
-- Name: Lupindo Senior Secondary School
-- Location: Sigoga Location, Mgubo A/A, Matatiele, 4730 (Eastern Cape)
-- Phone: +27 76 707 3212
-- Email: office@lupindosss.co.za
-- Motto: "We Can"
-- Principal: Ms B Ngozwana
-- Deputy Principal: Mr M Leanya
+- Name: Ludidi Senior Secondary School
+- Location: Ludidi A/A, Matatiele, 4730 (Eastern Cape)
+- Phone: +27 71 167 3161
+- Email: 200500449@ecschools.org.za
+- Motto: "Amidst difficulties we rise"
+- Principal: Mr S.S. Mafunda
 - School hours: Monday–Thursday 07:30–15:30, Friday 07:30–13:30
 - Grades: Grade 8 to Grade 12
 - 2027 applications currently open (general and boarding)
-- 2025 Matric pass rate: 94.5% | Bachelor passes: 206 (71.8%) | Distinctions: 451
 
 Be warm, clear and concise. Always encourage. If you are unsure about something very specific, direct them to call or email the school.`;
 
@@ -195,7 +193,7 @@ async function askClaude(userMessage: string): Promise<string> {
     return text;
   } catch (err) {
     console.error('[Chatbot] Claude request failed:', err);
-    return 'I\'m having trouble connecting right now. Please contact the school directly at +27 76 707 3212 or office@lupindosss.co.za.';
+    return 'I\'m having trouble connecting right now. Please contact the school directly at +27 71 167 3161 or 200500449@ecschools.org.za.';
   }
 }
 
@@ -211,7 +209,7 @@ export function ChatbotWidget(props: { defaultOpen?: boolean }) {
       id: uid(),
       role: 'bot',
       createdAt: Date.now(),
-      text: "👋 Hello! Let me help you! Whether it's admissions, boarding, fees, results, activities or anything else about Lupindo SSS — just ask and I'll be happy to assist.",
+      text: "👋 Hello! Let me help you! Whether it's admissions, boarding, fees, results, activities or anything else about Ludidi SSS — just ask and I'll be happy to assist.",
     },
   ]);
 
@@ -309,7 +307,7 @@ export function ChatbotWidget(props: { defaultOpen?: boolean }) {
         {
           id: uid(),
           role: 'bot',
-          text: 'Something went wrong. Please contact the school at +27 76 707 3212.',
+          text: 'Something went wrong. Please contact the school at +27 71 167 3161.',
           createdAt: Date.now(),
         },
       ]);
@@ -348,7 +346,7 @@ export function ChatbotWidget(props: { defaultOpen?: boolean }) {
                 <Sparkles size={16} />
               </div>
               <div className="min-w-0">
-                <div className="font-bold text-sm leading-tight truncate">Lupindo Assistant</div>
+                <div className="font-bold text-sm leading-tight truncate">Ludidi Assistant</div>
                 <div className="flex items-center gap-1 text-[11px] text-white/70 mt-0.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-300 inline-block animate-pulse" />
                   Online · AI-powered
