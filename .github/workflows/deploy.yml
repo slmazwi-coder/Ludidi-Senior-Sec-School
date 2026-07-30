@@ -18,9 +18,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Create .env file
         run: |
@@ -36,13 +37,28 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           VULAVULA_API_KEY: ${{ secrets.VULAVULA_API_KEY }}
 
-      - name: Sync files to Host Africa
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Sync files to public_html
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.LUDIDI_FTP_SERVER }}
           username: ${{ secrets.LUDIDI_FTP_USERNAME }}
           password: ${{ secrets.LUDIDI_FTP_PASSWORD }}
-          server-dir: /public_html/
+          server-dir: public_html/
           port: 21
-          protocol: ftp
+          protocol: ftps
           local-dir: ./dist/
+          state-name: .ftp-deploy-sync-state-public.json
+          dry-run: false
+
+      - name: Sync files to private_html
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.LUDIDI_FTP_SERVER }}
+          username: ${{ secrets.LUDIDI_FTP_USERNAME }}
+          password: ${{ secrets.LUDIDI_FTP_PASSWORD }}
+          server-dir: private_html/
+          port: 21
+          protocol: ftps
+          local-dir: ./dist/
+          state-name: .ftp-deploy-sync-state-private.json
+          dry-run: false
